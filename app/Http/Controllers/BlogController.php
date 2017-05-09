@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Blog;
+use App\Models\Blog; // 使うモデルを読み込ませる
 
 class BlogController extends Controller
 {
