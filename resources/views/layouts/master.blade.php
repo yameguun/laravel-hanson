@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/list">記事一覧</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/blog/new">記事新規作成ページ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/blog/create">記事新規作成ページ</a></li>
                         <li class="nav-item"><a class="nav-link" href="/ranking">アクセス数ランキング</a></li>
                     </ul>
                 </div>
