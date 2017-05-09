@@ -53,7 +53,7 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $blog = Blog::find($id);
         return view('pertials/blog/show', ['blog' => $blog]);
@@ -88,8 +88,13 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+       $blog = Blog::find($id);
+       $result = Blog::destroy($id);
+       if (!$result) {
+           return "blog delete fail";
+       }
+       return 'blog deleted';
     }
 }
