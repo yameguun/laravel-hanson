@@ -14,7 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $blogs = Blog::orderBy('created_at')->take(10)->get();
+        return view('pertials/blog/index', ['blogs' => $blogs]);
     }
 
     /**
