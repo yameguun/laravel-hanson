@@ -36,7 +36,14 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blog = new Blog();
+        $blog->title = $request->input('title');
+        $blog->article = $request->input('article');
+        $result = $blog->save();
+        if (!$result) {
+           return "blog create fail";
+        }
+        return "blog created";
     }
 
     /**
